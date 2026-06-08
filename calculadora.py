@@ -22,9 +22,11 @@ def dividir(a, b):
     return a / b
 
 def potencia(a, b):
+    """Retorna a potência de um numero"""
     return a ** b
 
 def calcular_media(lista):
+    """Retorna a media de uma lista"""
     if len(lista) == 0:
         raise ValueError("Não pode lista vazia")
     
