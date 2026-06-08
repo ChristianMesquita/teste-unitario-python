@@ -10,10 +10,13 @@ class TestCalculadora(unittest.TestCase):
     """Classe de testes para as funções do arquivo calculadora.py."""
 
     def test_somar(self):
-        """Testa se a função somar está funcionando corretamente."""
         self.assertEqual(somar(2, 3), 5)
         self.assertEqual(somar(-1, 1), 0)
         self.assertEqual(somar(0, 0), 0)
+        self.assertEqual(somar(5, 0), 5)
+        self.assertEqual(somar(-2, 5), 3)
+        self.assertEqual(somar(-2, -3), -5)
+        self.assertEqual(somar(1.5, 2.5), 4.0)
 
     def test_subtrair(self):
         """Testa se a função subtrair está funcionando corretamente."""
@@ -32,6 +35,8 @@ class TestCalculadora(unittest.TestCase):
         self.assertEqual(dividir(10, 2), 5)
         self.assertEqual(dividir(9, 3), 3)
         self.assertEqual(dividir(5, 2), 2.5)
+        self.assertEqual(dividir(-10, 2), -5)
+        self.assertEqual(dividir(0, 5), 0)
 
     def test_dividir_por_zero(self):
         """Testa se a divisão por zero gera erro."""
@@ -45,6 +50,7 @@ class TestCalculadora(unittest.TestCase):
 
     def test_calcular_media_inteiros(self):
         self.assertEqual(calcular_media([10, 8, 6]), 8)
+        self.assertEqual(calcular_media([-2, -4, -6]), -4)
 
     def test_calcular_media_decimais(self):
         self.assertEqual(calcular_media([2.5, 7.5, 5.0]), 5.0)
@@ -54,7 +60,7 @@ class TestCalculadora(unittest.TestCase):
 
     def test_calcular_media_vazia(self):
         with self.assertRaises(ValueError):
-            calcular_media([])
+            calcular_media([])        
 
 if __name__ == "__main__":
     unittest.main()
