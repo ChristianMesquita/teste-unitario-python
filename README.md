@@ -2,7 +2,7 @@
 
 ### Função escolhida
 
-`def calcular_media(lista):`
+`def calcular_media(lista)`
 
 ### Prompt utilizado
 
