@@ -7,13 +7,13 @@
 ### Prompt utilizado
 
 Crie uma tabela de planejamento de testes para a função abaixo:
-
+```
 calcular_media(lista):
     """Retorna a media de uma lista"""
     if len(lista) == 0:
         raise ValueError("Não pode lista vazia")
     return sum(lista) / len(lista)
-
+```
 A tabela deve conter as colunas:
 - ID do teste;
 - cenário;
@@ -60,3 +60,5 @@ def test_calcular_media_vazia(self):
 `python -m unittest test_calculadora.py`
 
 # Link do GitHub
+
+https://github.com/ChristianMesquita/teste-unitario-python
